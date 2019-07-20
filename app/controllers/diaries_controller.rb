@@ -7,8 +7,12 @@ class DiariesController < ApplicationController
 
     end 
 
-    def create 
+    def new 
+@diarie = Diarie.new 
+    end 
 
+    def create 
+        @diarie = Diarie.new(diarie_params)
     end 
 
     def edit
@@ -29,6 +33,6 @@ class DiariesController < ApplicationController
     end 
 
     def diarie_params
-
+params.require(:diarie).permit(:title, :content, :media ) #require the 
     end 
 end
