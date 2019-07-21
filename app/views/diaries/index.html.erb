@@ -1,0 +1,12 @@
+<h1>All the diaries </h1>
+
+
+ <% @diaries.each do |diarie| %>
+ <h2><%= link_to diarie.title, diarie %></h2>
+ <h2><%=  diarie.content %></h2>
+ <h2><%=  diarie.media%></h2>
+  <h2><%= time_ago_in_words(diarie.created_at)%></h2>
+
+
+ <% end %>
+

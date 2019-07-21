@@ -1,6 +1,16 @@
-<%= simple_form_for @diarie do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content%>
-  <%= f.input :media%>
-  <%= f.button :submit %>
+<%= form_for @diarie do |f| %>
+  <div class="input-field col s6">
+    <%= f.label :title, 'Title'%>
+    <%= f.text_field :title%>
+  </div>
+  <div class="input-field col s6">
+    <%= f.label :content, 'Content' %>
+    <%= f.text_field :content %>
+  </div>
+  <div class="input-field col s6">
+    <%= f.label :media, 'Media' %>
+    <%= f.text_field :media %>
+  </div>
+ 
+  <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
 <% end %>
