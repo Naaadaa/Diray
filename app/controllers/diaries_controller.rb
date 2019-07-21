@@ -27,6 +27,8 @@ class DiariesController < ApplicationController
         end
     
         def edit
+            @diarie = Diarie.find(params[:id])
+
         end
     
         def update
@@ -38,7 +40,7 @@ class DiariesController < ApplicationController
         end
     
         def destroy
-            @note.destroy
+            @diarie.destroy
             redirect_to diaries_path
         end
     

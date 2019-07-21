@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
 
 resources :diaries
+delete "diaries/:id", to: "diaries#destroy"
 
 end 
