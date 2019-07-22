@@ -13,11 +13,11 @@ class DiariesController < ApplicationController
         end
     
         def new
-            @diarie = Diarie.new 
+            @diarie = current_user.diaries.build 
         end
     
         def create
-            @diarie = Diarie.new(diarie_params)
+            @diarie = current_user.diaries.build(diarie_params)
     
             if @diarie.save
                 redirect_to @diarie
