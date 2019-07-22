@@ -1,4 +1,17 @@
 
  @import 'bootstrap';
-@import 'sketchy.min.css'
+//  @import 'sketchy.min.css';
 
+ body {
+    background-color:white;
+  font-family: fantasy;
+
+ }
+
+
+.all{
+    text-align: center; 
+}
+.card-footer{
+    background-color:#fcf6f4; 
+}

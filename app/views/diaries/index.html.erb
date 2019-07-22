@@ -1,23 +1,24 @@
-<h1>All the diaries </h1>
+<p id="notice"><%= notice %></p>
+<h1 class ="all">All the diaries </h1>
 
 
-<%= link_to "Logout", destroy_user_session_path, method: :delete, class:"nav-link" %>
-
+<div class="card-columns">
  <% @diaries.each do |diarie| %>
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5> <%= link_to diarie.title, diarie, class:"card-title" %> </h5>
-        <p class="card-text">   <%= time_ago_in_words(diarie.created_at)%> </p>      
-      </div>
+     <div class="card main-view">
+       <div class="card-body">
+          <h2 class="card-title">
+         <%= link_to diarie.title, diarie, class:"text-dark" %> 
+           </h2>
+           <div class="card-footer">
+           <%= time_ago_in_words(diarie.created_at)%> 
+           </div> 
+           
+        
     </div>
-  </div>
-</div> 
+     </div>
 
-
-
-<%= link_to "New Diary", new_diary_path %>
 
  <% end %>
+ </div> 
+ <%= link_to "New Diary", new_diary_path %>
 
