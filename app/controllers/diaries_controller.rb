@@ -5,7 +5,7 @@ class DiariesController < ApplicationController
 
     
         def index
-            @diaries = Diarie.all.order("created_at DESC")
+            @diaries = Diarie.where(user_id: current_user) #to show only diaries belongs to the current users 
         end
     
         def show
