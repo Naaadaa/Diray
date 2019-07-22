@@ -44,6 +44,10 @@ class DiariesController < ApplicationController
             redirect_to diaries_path
         end
     
+        def bootstrap
+
+        end 
+      
         private
     
         def find_diarie

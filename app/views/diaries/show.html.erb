@@ -4,6 +4,7 @@
  <h3><%= @diarie.media %></h3>
 
 
+
 <%= link_to "All diaries", diaries_path %>
 <%= link_to "Edit", edit_diary_path(@diarie)%>
  <a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= @diarie.title %>?" data-method="delete" href="/diaries/<%= @diarie.id %>" rel="nofollow"><i class="large material-icons">Delete</i>

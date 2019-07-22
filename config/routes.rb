@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :diaries
+ 
 
   authenticated :user do
 	  root "diaries#index", as: "authenticated_root" 
@@ -8,5 +9,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
 delete "diaries/:id", to: "diaries#destroy"
+
+
 
 end 
