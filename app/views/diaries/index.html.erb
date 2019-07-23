@@ -18,6 +18,7 @@
 
 
 <div class="card-columns">
+
  <% @diaries.each do |diarie| %>
      <div class="card main-view">
        <div class="card-body">
@@ -27,9 +28,10 @@
            <div class="card-footer">
            <%= time_ago_in_words(diarie.created_at)%> 
            </div> 
-           
+        
         
     </div>
+   
      </div>
 
 
