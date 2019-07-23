@@ -1,5 +1,5 @@
 
- @import 'bootstrap';
+//  @import 'bootstrap';
  @import 'Litera.min.css';
 
 
@@ -19,3 +19,26 @@
     -o-background-size: cover;
     background-size: cover;
   }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:white;
+    color:black;
+    text-align: center;
+   font-style: italic;
+  }
+
+
+  #new {
+ width: 40%;
+margin-left: 30%;
+margin-right: 30%
+  }
+
+.empty {
+  text-align: center; 
+  font-size: 50px; 
+}

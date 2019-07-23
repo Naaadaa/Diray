@@ -1,2 +1,17 @@
-<h1>Favorites#show</h1>
-<p>Find me in app/views/favorites/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1> <center> Your Favorite diaries </center> </h1>
+     <div class="card-columns">
+      <div class="card-body">
+         <h2 class="card-title">
+<% current_user.favorites.each do |favorite| %>
+
+<div class="card main-view"> 
+<%= link_to favorite.diarie.title, favorite.diarie,class:"text-dark" %>
+</h2>
+
+</div>
+</div>
+<%end%>
+
+<%= link_to "back" , diaries_path, class:"btn btn-outline-secondary", id:"new" %>

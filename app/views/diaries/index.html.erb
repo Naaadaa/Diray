@@ -1,22 +1,12 @@
+
+
 <p id="notice"><%= notice %></p>
-
-<h1> <center> Your Favorite diaries </center> </h1>
-     <div class="card-columns">
-      <div class="card-body">
-         <h2 class="card-title">
-<% current_user.favorites.each do |favorite| %>
-
-<div class="card main-view"> 
-<%= link_to favorite.diarie.title, favorite.diarie,class:"text-dark" %>
-</h2>
-
-</div>
-</div>
-<%end%>
 
 <h1 class ="all">All the diaries </h1>
 
+ <%= link_to "Your Favorite Diaries" , favorites_show_path, class:"btn btn-outline-secondary", id:"new" %>
 
+<div class = "empty">  ...  </div>
 <div class="card-columns">
 
  <% @diaries.each do |diarie| %>
@@ -29,7 +19,6 @@
            <%= time_ago_in_words(diarie.created_at)%> 
            </div> 
         
-        
     </div>
    
      </div>
@@ -37,5 +26,10 @@
 
  <% end %>
  </div> 
- <%= link_to "New Diary", new_diary_path %>
+
+<div class = "empty">  ...  </div>
+
+ <%= link_to "New Diary", new_diary_path, class:"btn btn-outline-secondary", id:"new" %>
+
+
 
