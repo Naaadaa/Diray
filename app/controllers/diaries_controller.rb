@@ -10,6 +10,7 @@ class DiariesController < ApplicationController
     
         def show
             @diarie = Diarie.find(params[:id])
+            @favorite_exists = Favorite.where(diarie: @diarie, user: current_user)== [] ? false : true 
         end
     
         def new

@@ -7,10 +7,10 @@
 
  <div class="btn-group" role="group">
 
-    
+
 <%= link_to "Edit", edit_diary_path(@diarie), class:"btn btn-outline-dark btn-sm" %>
  <%= link_to 'Delete', @diarie, method: :delete, data: { confirm: "Are you sure you want to delete it ?"} , class:"btn btn-outline-dark btn-sm"%> 
  <%= link_to 'Back', diaries_path , class:"btn btn-outline-dark btn-sm"%>
-<%= link_to 'Bookmark', diaries_path , class:"btn btn-outline-dark btn-sm"%>
+<%= link_to favorite_text , favorites_edit_path(diarie: @diarie), id:'favorite_link', remote: true , class:"btn btn-outline-dark btn-sm"%>
 </div>
 </div>

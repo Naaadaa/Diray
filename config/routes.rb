@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'favorites/index'
+  get 'favorites/new'
+  get 'favorites/show'
+  get 'favorites/edit'
   devise_for :users
   resources :diaries
  

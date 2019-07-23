@@ -6,5 +6,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
         has_many :diaries, class_name: 'Diarie'
+        has_many :favorites, class_name: 'Favorite'
         
 end
