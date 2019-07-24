@@ -67,3 +67,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+# Production
+group :production do
+  # Rails 12factor
+  # Makes running your Rails app easier. Based on the ideas behind 12factor.net
+  # Needed for support of Asset Pipeline with Heroku
+  # https://github.com/heroku/rails_12factor
+  gem 'rails_12factor'
+end
