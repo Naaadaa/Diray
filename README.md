@@ -1,24 +1,19 @@
-# README
+# My Diary 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+ ## Summary
 
-* Ruby version
+Diary App built using Ruby on Rails. 
 
-* System dependencies
+## Technologies used in this app 
+1- Ruby on Rails 
+2- bootstrap 
+3- jQuery 
 
-* Configuration
+## Resources 
 
-* Database creation
+https://guides.rubyonrails.org/active_record_validations.html 
+https://guides.rubyonrails.org/layouts_and_rendering.html
+https://bootswatch.com/ 
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

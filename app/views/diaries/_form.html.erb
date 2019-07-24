@@ -6,13 +6,20 @@
   </div>
   <div class="input-field col s6">
     <%= f.label :content, 'Content' %>
-    <%= f.text_field :content %>
+    <%= f.text_area :content, size:"50x10"%>
+  
   </div>
   <div class="input-field col s6">
     <%= f.label :media, 'Media' %>
     <%= f.text_field :media %>
   </div>
-     <div class="form-group">
+  <div class= "field">
+  <%= f.label :image %>
+  <%=  f.file_field :image %>
+  </div >
+
+
+    <div class="form-group">
   <%= f.submit "Submit", class:"btn btn-dark" %>
   </div>
   </div>
