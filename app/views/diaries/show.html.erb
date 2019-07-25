@@ -4,7 +4,7 @@
 
 <h1><%= @diarie.title %></h1>
 
- <p><%= @diarie.content %></p>
+ <p class= "content"><%= @diarie.content %></p>
  <h3><%= @diarie.media %></h3>
  <div style = "width:200px; height:auto">
  <% link_to image_tag(@diarie.media, style:'width:100%'), diaries_path %>

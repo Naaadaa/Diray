@@ -1,6 +1,7 @@
 # My Diary 
 
-
+ ![alt_text](app⁩/assets⁩/images/TOP.png)
+ 
  ## Summary
 
 Diary App built using Ruby on Rails. 
