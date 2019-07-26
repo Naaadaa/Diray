@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+        <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+        <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    
+    <!-- Title Tag -->
+	<title>myTalk 107.1 | Everything Entertainment | St. Paul/Minneapolis Jason and Alexis: Dear Diary 10/6/17 - myTalk 107.1 | Everything Entertainment | St. Paul/Minneapolis</title>
+    
+        <link rel="icon" type="image/png" href="http://mytalk.wpengine.com/wp-content/uploads/2014/05/favicon.ico" />
+        
+    <!-- Mobile Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/mobile-style.css" /> 
+
+    <!-- Desktop Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/style.css?version=1.5" /> 
+ 
+    <!--font awesome-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+
+    !function(f,b,e,v,n,t,s)
+
+
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+
+
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+
+
+    n.queue=[];t=b.createElement(e);t.async=!0;
+
+
+    t.src=v;s=b.getElementsByTagName(e)[0];
+
+
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+
+
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+
+    fbq('init', '376935046458538');
+
+
+    fbq('track', 'PageView');
+
+    </script>
+    <noscript>
+    <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=376935046458538&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+       
+    <!-- Browser dependent stylesheets -->
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/css/ie8.css" media="screen" />
+    <![endif]-->
+    
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/css/ie7.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/css/font-awesome-ie7.min.css" media="screen" />
+    <![endif]-->
+    
+    <!-- Load HTML5 dependancies for IE -->
+    <!--[if IE]>
+        <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- AddThis Pro BEGIN -->
+	<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a23e970670b061"></script> -->
+	<!-- AddThis Pro END -->
+					
+    <!-- WP Head -->
+    
+<!-- This site is optimized with the Yoast SEO plugin v4.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.mytalk1071.com/jason-alexis-dear-diary-10617/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Jason and Alexis: Dear Diary 10/6/17 - myTalk 107.1 | Everything Entertainment | St. Paul/Minneapolis" />
+<meta property="og:description" content="Alexis and Dawn have found their diaries from age 10-high school.  Right now, they are..." />
+<meta property="og:url" content="https://www.mytalk1071.com/jason-alexis-dear-diary-10617/" />
+<meta property="og:site_name" content="myTalk 107.1 | Everything Entertainment | St. Paul/Minneapolis" />
+<meta property="article:publisher" content="https://www.facebook.com/myTalk1071" />
+<meta property="article:author" content="mytalk1071" />
+<meta property="article:tag" content="Dear Diary" />
+<meta property="article:tag" content="Jason &amp; Alexis" />
+<meta property="article:section" content="homepage" />
+<meta property="article:published_time" content="2017-10-09T11:44:55-05:00" />
+<meta property="fb:admins" content="1518383132" />
+<meta property="og:image" content="https://www.mytalk1071.com/wp-content/uploads/2017/10/Diary.jpg" />
+<meta property="og:image:width" content="7360" />
+<meta property="og:image:height" content="4912" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Alexis and Dawn have found their diaries from age 10-high school.  Right now, they are..." />
+<meta name="twitter:title" content="Jason and Alexis: Dear Diary 10/6/17 - myTalk 107.1 | Everything Entertainment | St. Paul/Minneapolis" />
+<meta name="twitter:site" content="@mytalk1071" />
+<meta name="twitter:image" content="https://www.mytalk1071.com/wp-content/uploads/2017/10/Diary.jpg" />
+<meta name="twitter:creator" content="@mytalk1071" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="myTalk 107.1 | Everything Entertainment | St. Paul/Minneapolis &raquo; Feed" href="https://www.mytalk1071.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="myTalk 107.1 | Everything Entertainment | St. Paul/Minneapolis &raquo; Comments Feed" href="https://www.mytalk1071.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.mytalk1071.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.10"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='rt-wpp-plugin-style-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/rt-prettyphoto/css/prettyPhoto.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='hbi-futuri-post-css-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hbi-futuri-post/public/dist/css/post-min.css?ver=1.5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='hbi-shared-content-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hbi-shared-content/public/css/hbi-shared-content-public.css?ver=1.5' type='text/css' media='all' />
+<link rel='stylesheet' id='hubbard-keywords-plugin-styles-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hubbard-keywords/css/public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='hubbard-keywordsjquery-ui-style-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hubbard-keywords/js/jquery-ui/jquery-ui.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='hubbard-keywordsjquery-ui-theme-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hubbard-keywords/js/jquery-ui/jquery-ui.theme.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='sb_instagram_styles-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/instagram-feed/css/sb-instagram.min.css?ver=1.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sb-font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='weather-plugin-styles-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/local-weather/css/public.css?ver=1.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='on-air-schedule-plugin-styles-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/on-air-schedule/css/public.css?ver=2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='jqueryui_style-css'  href='https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='symple_shortcode_styles-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/symple-shortcodes/shortcodes/css/symple_shortcodes_styles.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/wpp.css?ver=4.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/wp-to-twitter/css/twitter-feed.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='zilla-likes-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/zilla-likes/styles/zilla-likes.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='hbi_ondemand-plugin-styles-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hbi_ondemand/public/assets/css/public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='voting_bracket-plugin-styles-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/voting_bracket/public/assets/css/public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wpex-style-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='wpex-droid-serif-css'  href='https://fonts.googleapis.com/css?family=Droid+Serif%3A400%2C400italic&#038;ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpex-open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C600italic%2C700italic%2C400%2C600%2C700&#038;subset=latin%2Ccyrillic-ext%2Clatin-ext%2Ccyrillic%2Cgreek-ext%2Cgreek%2Cvietnamese&#038;ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/css/responsive.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.6-78496d1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='views-pagination-style-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/wp-views/embedded/res/css/wpv-pagination.css?ver=2.3.1' type='text/css' media='all' />
+<style id='views-pagination-style-inline-css' type='text/css'>
+.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default > span.wpv-sort-list,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default .wpv-sort-list-item {border-color: #cdcdcd;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default .wpv-sort-list-item a {color: #444;background-color: #fff;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default a:hover,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default a:focus {color: #000;background-color: #eee;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default .wpv-sort-list-item.wpv-sort-list-current a {color: #000;background-color: #eee;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey > span.wpv-sort-list,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey .wpv-sort-list-item {border-color: #cdcdcd;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey .wpv-sort-list-item a {color: #444;background-color: #eeeeee;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey a:hover,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey a:focus {color: #000;background-color: #e5e5e5;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey .wpv-sort-list-item.wpv-sort-list-current a {color: #000;background-color: #e5e5e5;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue > span.wpv-sort-list,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue .wpv-sort-list-item {border-color: #0099cc;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue .wpv-sort-list-item a {color: #444;background-color: #cbddeb;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue a:hover,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue a:focus {color: #000;background-color: #95bedd;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue .wpv-sort-list-item.wpv-sort-list-current a {color: #000;background-color: #95bedd;}
+</style>
+<link rel='stylesheet' id='timed-content-css-css'  href='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/timed-content/css/timed-content.css?ver=2.6' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v5.5 - Universal disabled - https://www.monsterinsights.com/ -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-1347089-2']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/rt-prettyphoto/js/jquery.prettyPhoto.js?ver=4.9.10'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/rt-prettyphoto/js/wpp-active.js?ver=4.9.10'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hbi-futuri-post/public/vendor/jquery-template/dist/jquery.loadTemplate.min.js?ver=1.5.5'></script>
+<script type='text/javascript'>
+var mejsL10n = {"language":"en","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.6-78496d1'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=4.9.10'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hbi-shared-content/public/js/hbi-shared-content-public.js?ver=1.5'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hubbard-keywords/js/jquery-ui/jquery-ui.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hubbard-keywords/js/public.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/on-air-schedule/js/public.js?ver=2.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpp_params = {"sampling_active":"","sampling_rate":"100","ajax_url":"https:\/\/www.mytalk1071.com\/wp-admin\/admin-ajax.php","action":"update_views_ajax","ID":"79504","token":"e7f36659f3"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/wordpress-popular-posts/public/js/tracking.js?ver=4.0.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var zilla = {"ajaxurl":"https:\/\/www.mytalk1071.com\/wp-admin\/admin-ajax.php"};
+var zilla_likes = {"ajaxurl":"https:\/\/www.mytalk1071.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/zilla-likes/scripts/zilla-likes.js?ver=4.9.10'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hbi_ondemand/public/assets/js/public.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/voting_bracket/public/assets/js/public.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/timed-content/js/timed-content.js?ver=2.6'></script>
+<link rel='https://api.w.org/' href='https://www.mytalk1071.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mytalk1071.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.mytalk1071.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.mytalk1071.com/?p=79504' />
+<link rel="alternate" type="application/json+oembed" href="https://www.mytalk1071.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mytalk1071.com%2Fjason-alexis-dear-diary-10617%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.mytalk1071.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mytalk1071.com%2Fjason-alexis-dear-diary-10617%2F&#038;format=xml" />
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+      googletag.cmd.push(function() {
+        var footerboard = googletag.sizeMapping().addSize([0, 0], [320, 50]).addSize([728, 0], [728, 90]).build();
+var leaderboard = googletag.sizeMapping().addSize([0, 0], [320, 50]).addSize([728, 0], [728, 90]).build();
+
+var ad_unit_220_90_deals = googletag.defineSlot('/4432/hbi.fm107/run_of_site_deals', [220, 90], 'ad-unit-220_90_deals').setCollapseEmptyDiv(true).addService(googletag.pubads());
+var ad_unit_970_90_header = googletag.defineSlot('/4432/hbi.fm107/run_of_site_leaderboard', [970, 90], 'ad-unit-970_90_header').defineSizeMapping(leaderboard).setCollapseEmptyDiv(true).addService(googletag.pubads());
+var ad_unit_300_250_feed_3 = googletag.defineSlot('/4432/hbi.fm107/run_of_site_300x250_3', [300, 250], 'ad-unit-300_250_feed_3').setCollapseEmptyDiv(true).addService(googletag.pubads());
+var ad_unit_300_600_feed_6 = googletag.defineSlot('/4432/hbi.fm107/run_of_site_300x600_6', [300, 600], 'ad-unit-300_600_feed_6').setCollapseEmptyDiv(true).addService(googletag.pubads());
+var ad_unit_300_250_feed_9 = googletag.defineSlot('/4432/hbi.fm107/run_of_site_300x250_9', [300, 250], 'ad-unit-300_250_feed_9').setCollapseEmptyDiv(true).addService(googletag.pubads());
+var ad_unit_300_250_footer = googletag.defineSlot('/4432/hbi.fm107/run_of_site_ad2_300x250', [300, 250], 'ad-unit-300_250_footer').setCollapseEmptyDiv(true).addService(googletag.pubads());
+var ad_unit_728_90_footer = googletag.defineSlot('/4432/hbi.fm107/run_of_site_footerboard', [728, 90], 'ad-unit-728_90_footer').defineSizeMapping(footerboard).setCollapseEmptyDiv(true).addService(googletag.pubads());
+        googletag.pubads().setTargeting("is_front", "false");
+                googletag.pubads().setTargeting("is_archive", "false");
+                googletag.pubads().setTargeting("is_article", "true");
+                googletag.pubads().setTargeting("is_gallery", "false");
+                googletag.pubads().setTargeting("is_page", "false");
+                googletag.pubads().setTargeting("is_search", "false");
+                googletag.pubads().setTargeting("is_author", "false");
+                googletag.pubads().setTargeting("slug", "jason-alexis-dear-diary-10617");
+                googletag.pubads().setTargeting("category", ["homepage","jasonalexis","mytalk"]);
+                googletag.pubads().setTargeting("gallery_collection", {"errors":{"invalid_taxonomy":["Invalid taxonomy."]},"error_data":[]});
+                googletag.pubads().setTargeting("tag", ["dear-diary","jason-alexis"]);
+                googletag.pubads().setTargeting("author", "jasonalexis");
+                googletag.pubads().setTargeting("has_takeover", "false");
+                googletag.pubads().setTargeting("takeover_id", "0");
+                googletag.pubads().setTargeting("has_parent", 0);
+        
+        googletag.enableServices();
+      });
+    </script>
+    <script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('img[usemap]').rwdImageMaps();
+	});
+</script>
+<style type="text/css">
+	img[usemap] { max-width: 100%; height: auto; }
+</style>
+
+<style type='text/css'>
+/* Begin Royal PrettyPhoto Styles*/
+
+@import url(https://fonts.googleapis.com/css?family=Autour+One|Meie+Script|Armata|Rum+Raisin|Sonsie+One|Kavoon|Denk+One|Gravitas+One|Racing+Sans+One|Nosifer|Ropa+Sans|Offside|Titan+One|Paytone+One|Audiowide|Righteous|Faster+One|Russo+One|Germania+One|Krona+One|Emblema+One|Creepster|Delius+Unicase|Wallpoet|Sansita+One|Monoton|Kenia|Monofett);
+
+div.ppt {
+	 display: none;
+}
+
+
+.pp_nav {
+	 
+}
+
+
+.pp_social {
+	 
+}
+
+
+.pp_gallery {
+	 
+}
+
+
+div.ppt{
+	font-family:;
+	color:;
+}
+
+
+a.pp_next, a.pp_previous 
+{
+	 
+}
+
+
+div.pp_default .pp_expand, 
+.pp_fade a.pp_expand, 
+a.pp_expand, 
+div.facebook .pp_expand, 
+div.light_square .pp_expand, 
+div.dark_square .pp_expand, 
+div.dark_rounded .pp_expand, 
+div.light_rounded .pp_expand
+{
+	 
+}
+
+
+/* End Royal PrettyPhoto Styles*/
+</style>
+
+<!-- Custom CSS -->
+<style type="text/css">
+body.prince,
+.prince #footer-bottom {
+  background-image: none;
+  background-color: #CCC0DC;
+}
+.prince .menu-style,
+.prince .onair_banner_listen_now { background-color: #330072 !important; }
+
+body.prince a:hover,
+.prince #navigation .sf-menu ul a:hover {
+  color: #9980B8 !important;
+}
+
+.prince .menu-style:before { border-bottom-color: #330072; }
+
+.prince #logo a { 
+  background: url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/mytalk_purple.png) no-repeat center; 
+  background-size: contain;
+}
+
+.prince #logo a img { opacity: 0; }
+
+.prince #header-top { background-image: url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/mytalk_header_bg_prince_v3.png); }
+
+.prince #header-social-icons { top: 90%; }
+
+.entry .row {
+  margin: 0 -10px;
+}
+.entry .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.entry [class*="col-"] {
+  float: left;
+  padding: 0 10px 20px;
+  box-sizing: border-box;
+}
+.entry .col-1-4 { width: 25%; }
+.entry .col-1-3 { width: 33.3333%; }
+.entry .col-1-2 { width: 50%; }
+.entry .col-2-3 { width: 66.6666%; }
+.entry .col-3-4 { width: 75%; }
+.entry .col-1 { width: 100%; }
+
+@media (max-width: 767px) {
+  .entry [class*="col-"] {
+    float: none;
+    width: 100%;
+  }
+}
+
+.entry-din {
+  font-family: DINMittel, sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+  color: #000;
+  /*text-rendering: geometricPrecision;*/
+  margin-bottom: 1em;
+}
+.entry-din [class*="col-"] {
+  padding-bottom: 0 !important;
+}
+.entry-din h2 { font-size: 1.5em; }
+.entry-din h3 { font-size: 1.25em; }
+.chevron-head {
+  position: relative;
+  font-size: 2em !important;
+  line-height: 0.75em;
+  text-transform: none;
+  text-align: center;
+  margin: 0;
+  padding: 0.25em 1em;
+}
+.chevron-head:before, 
+.chevron-head:after {
+content: "»";
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    font-family: "Arial", sans-serif;
+    font-size: 1.25em;
+    line-height: .5;
+    font-weight: 700;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.chevron-head:after {
+    left: auto;
+    right: 5%;
+}
+.post-stats {
+	display: inline !important;
+}
+.wpp-views {
+        padding-top: 5px !important;
+}.loop-entry-img-link{ background: #000000; }.loop-entry-img-link:hover img{ opacity: 0.5; -moz-opacity: 0.5; -webkit-opacity: 0.5; }
+</style><link rel="icon" href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/cropped-mytalk_Bubble_512x512-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/cropped-mytalk_Bubble_512x512-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/cropped-mytalk_Bubble_512x512-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.mytalk1071.com/wp-content/uploads/2014/08/cropped-mytalk_Bubble_512x512-270x270.png" />
+    
+    	
+    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=274370919431654&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+</head><!-- /end head -->
+
+<!-- Begin Body -->
+
+<body class="post-template-default single single-post postid-79504 single-format-standard body  symple-shortcodes  symple-shortcodes-responsive">
+
+<!-- Google Code for Remarketing Tag -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 852920502;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/852920502/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5C7S23" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5C7S23');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K8BRHG"
+
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-K8BRHG');</script>
+
+<!-- End Google Tag Manager -->
+
+<div id="header-wrap"  >
+    <header id="header" class="outerbox clearfix">
+    		<div id="leaderboard_ads" class="clearfix" style="margin:0!important; padding:8px 0 9px;">
+			<div class="leaderboard_ad" style="float:left;margin-bottom:8px;">
+                <div id="ad-unit-970_90_header" class="adslot">
+                    <script>
+                        googletag.cmd.push(function() { googletag.display('ad-unit-970_90_header'); });
+                    </script>
+                </div>
+            </div>
+            <div id="deals_ad" style="float:right;">
+                    <div id="ad-unit-220_90_deals" class="adslot" style="width:100%; height: auto; margin-bottom: 8px;">
+                        <script>
+                            googletag.cmd.push(function() { googletag.display('ad-unit-220_90_deals'); });
+                        </script>
+                    </div>
+                </div>
+            
+            <!--
+            <a href="https://twincitiessavers.com/index.php?rd=auctions" target="_blank">
+            <div id="deals_ad" style="float:right">
+            	<img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/images/tcs_auction_220x90.png" />
+            </div>
+            </a>-->
+            
+		</div>
+    	<div id="header-top">
+            <div id="logo" class="clearfix">
+                <a href="https://www.mytalk1071.com/" title="myTalk 107.1 | Everything Entertainment | St. Paul/Minneapolis" rel="home">
+                                            <img src="http://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/05/mytalk_pink1.png" alt="" />
+                                    </a>
+            </div><!-- /logo -->
+
+<!--Comment out the included social icons in order to insert the correct ones
+	            <ul id="header-social">
+                <li><a href="https://twitter.com/myTalk1071" title="twitter" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/twitter.png" alt="twitter" /></a></li><li><a href="https://www.facebook.com/myTalk1071" title="facebook" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/facebook.png" alt="facebook" /></a></li><li><a href="http://www.pinterest.com/mytalk1071/" title="pinterest" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/pinterest.png" alt="pinterest" /></a></li><li><a href="https://www.youtube.com/user/mytalk1071" title="youtube" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/youtube.png" alt="youtube" /></a></li><li><a href="http://www.snapchat.com/mytalk" title="blogger" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/blogger.png" alt="blogger" /></a></li><li><a href="http://instagram.com/mytalk1071" title="picasa" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/picasa.png" alt="picasa" /></a></li><li><a href="https://vine.co/myTalk1071" title="newsvine" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/newsvine.png" alt="newsvine" /></a></li><li><a href="http://www.mytalk1071.com/pages/rss_subscriptions.php" title="rss" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/rss.png" alt="rss" /></a></li><li><a href="http://www.mytalk1071.com/pages/contact.php" title="mail" target="_blank" class="wpex-tooltip"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/images/social/mail.png" alt="mail" /></a></li>                </ul><!-- /header-social -->
+             
+	<!--End commenting out the themes social icons-->
+
+<!-- Start of hardcoded social icons -->            
+<ul id="header-social-icons">
+                <li><a href="https://www.facebook.com/myTalk1071" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/facebook.jpg); background-repeat:no-repeat;"></div></a></li>
+                <li><a href="https://twitter.com/myTalk1071" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/twitter.jpg); background-repeat:no-repeat;"></div></a></li>
+		<li><a href="https://www.pinterest.com/mytalk1071/" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/pinterest.jpg); background-repeat:no-repeat;"></div></a></li>
+		<li><a href="https://www.youtube.com/user/mytalk1071" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/youtube.jpg); background-repeat:no-repeat;"></div></a></li>
+		<li><a href="https://instagram.com/mytalk1071" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/instagram.jpg); background-repeat:no-repeat;"></div></a></li>
+		<li><a href="https://vine.co/myTalk1071" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/vine.jpg); background-repeat:no-repeat;"></div></a></li>
+		<li><a href="https://tunein.com/radio/myTalk-1071-s29715/" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/tunein.jpg); background-repeat:no-repeat;"></div></a></li>
+		<li><a href="https://www.mytalk1071.com/pages/rss-subscriptions/" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/rss.jpg); background-repeat:no-repeat;"></div></a></li>
+		<li><a href="https://www.mytalk1071.com/pages/contact-us/" target="_blank" class="header-social-icons"><div class="social-icon-image" style="background-image:url(https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/mail.jpg); background-repeat:no-repeat;"></div></a></li>
+            </ul>
+<!-- End of hardcoded social icons -->
+
+
+        </div><!-- /header-top -->
+		<div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close"></a></div><a href="#sidr" class="mobile-menu-toggle"><span class="icon-reorder"></span>Browse<span class="icon-caret-down"></span></a> <a href="http://www.mytalk1071.com/keyword/"><img id="mobile-search" src="http://mytalk.wpengine.com/wp-content/themes/hbi-fahsionista-child/images/search-black.png" /></a> 
+        <nav id="navigation" class="clearfix" >
+			<div class="menu-style"></div><div class="menu-main-nav-container"><ul id="menu-main-nav" class="sf-menu"><li id="menu-item-73730" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-73730"><a href="http://live.mytalk1071.com/listen/">Listen Now</a>
+<ul class="sub-menu">
+	<li id="menu-item-41975" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41975"><a href="http://live.mytalk1071.com/listen/">Listen Live</a></li>
+	<li id="menu-item-103861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103861"><a href="https://www.mytalk1071.com/pages/mytalk-107-1-podcasts/">myTalk 107.1 Podcasts</a></li>
+</ul>
+</li>
+<li id="menu-item-809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-809"><a href="https://www.mytalk1071.com/shows/schedule/">myShows</a>
+<ul class="sub-menu">
+	<li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="https://www.mytalk1071.com/shows/jason-alexis/">Jason &#038; Alexis</a></li>
+	<li id="menu-item-13798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13798"><a href="https://www.mytalk1071.com/shows/ninetonoon/">Donna &#038; Steve</a></li>
+	<li id="menu-item-699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-699"><a href="https://www.mytalk1071.com/shows/colleen-bradley/">Colleen &#038; Bradley</a></li>
+	<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="https://www.mytalk1071.com/shows/lori-julia/">Lori and Julia</a></li>
+	<li id="menu-item-703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-703"><a href="https://www.mytalk1071.com/shows/shop-girls/">Shop Girls</a></li>
+	<li id="menu-item-706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-706"><a href="https://www.mytalk1071.com/shows/weekly-dish/">Weekly Dish</a></li>
+	<li id="menu-item-810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-810"><a href="https://www.mytalk1071.com/shows/schedule/">Full Schedule</a></li>
+</ul>
+</li>
+<li id="menu-item-816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-816"><a href="https://www.mytalk1071.com/pages/station-events/">myStation</a>
+<ul class="sub-menu">
+	<li id="menu-item-814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-814"><a href="https://www.mytalk1071.com/pages/station-events/">Station Events</a></li>
+	<li id="menu-item-817" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-817"><a href="https://www.mytalk1071.com/category/mytalk/mytalk-gallery/">Photo Galleries</a></li>
+	<li id="menu-item-818" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-818"><a href="https://www.mytalk1071.com/category/mytalk/mytalk-video/">Video</a></li>
+	<li id="menu-item-811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-811"><a href="https://www.mytalk1071.com/pages/advertiser-directory/">Advertiser Directory</a></li>
+	<li id="menu-item-117497" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117497"><a href="https://hubbardbroadcasting.com" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://hubbardbroadcasting.com', 'Careers']);" >Careers</a></li>
+	<li id="menu-item-813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813"><a href="https://www.mytalk1071.com/pages/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-75164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-75164"><a href="http://live.mytalk1071.com/listen/rewards">myRewards</a>
+<ul class="sub-menu">
+	<li id="menu-item-75163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75163"><a href="http://live.mytalk1071.com/listen/rewards">Ways to Win</a></li>
+</ul>
+</li>
+<li id="menu-item-823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-823"><a href="https://www.mytalk1071.com/pages/station-events/">myEvents</a>
+<ul class="sub-menu">
+	<li id="menu-item-824" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-824"><a href="https://www.mytalk1071.com/pages/station-events/">Station Events</a></li>
+	<li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-849"><a href="https://www.mytalk1071.com/pages/twin-cities-events/">Twin Cities Events</a></li>
+</ul>
+</li>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13"><a href="http://twincitiessavers.com/?rd=fmdining&#038;sta=fm" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://twincitiessavers.com/?rd=fmdining&#038;sta=fm', 'myDeals']);" target="_blank">myDeals</a>
+<ul class="sub-menu">
+	<li id="menu-item-726" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-726"><a href="http://twincitiessavers.com/?rd=fmdining&#038;sta=fm" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://twincitiessavers.com/?rd=fmdining&#038;sta=fm', 'Half Off Deals']);" target="_blank">Half Off Deals</a></li>
+	<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="http://www.twincitiessavers.com/index.php?rd=auctions" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://www.twincitiessavers.com/index.php?rd=auctions', 'Weekly Auction']);" target="_blank">Weekly Auction</a></li>
+	<li id="menu-item-727" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-727"><a href="http://twincitiessavers.com/edeals_signup.php" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://twincitiessavers.com/edeals_signup.php', 'eDeals Newsletter']);" target="_blank">eDeals Newsletter</a></li>
+	<li id="menu-item-728" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-728"><a href="http://www.twincitiessavers.com/" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://www.twincitiessavers.com/', 'TwinCitiesSavers.com']);" target="_blank">TwinCitiesSavers.com</a></li>
+</ul>
+</li>
+<li id="menu-item-827" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-827"><a href="http://mytalk1071.com/">myFeed</a>
+<ul class="sub-menu">
+	<li id="menu-item-4051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4051"><a href="https://www.mytalk1071.com/pages/daily-dirt/">myTalk&#8217;s Daily Dirt eMail</a></li>
+	<li id="menu-item-834" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-834"><a href="https://www.mytalk1071.com/category/blog/entertainment/">Entertainment</a></li>
+	<li id="menu-item-832" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-832"><a href="https://www.mytalk1071.com/category/blog/celeb/">Celeb</a></li>
+	<li id="menu-item-837" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-837"><a href="https://www.mytalk1071.com/category/blog/lifestyle/">Lifestyle</a></li>
+	<li id="menu-item-842" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-842"><a href="https://www.mytalk1071.com/category/blog/fashion/">Fashion</a></li>
+	<li id="menu-item-8626" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8626"><a href="http://www.mytalk1071.com/category/blog/viral/">Viral</a></li>
+	<li id="menu-item-838" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-838"><a href="https://www.mytalk1071.com/category/blog/local/">Local</a></li>
+</ul>
+</li>
+</ul></div>			
+<script type='text/javascript'>
+	
+		var keywords = [{"label":"SMART","link":"http:\/\/www.mytalk1071.com\/shows\/smart-money\/","target":"SELF","title_client":"smart money"},{"label":"NUTRITIONAL WEIGHT AND WELLNESS","link":"http:\/\/www.weightandwellness.com\/","target":"SELF","title_client":"nutritional weight and wellness"},{"label":"BRICKMAN","link":"http:\/\/www.ames-center.com\/jim-brickman.html","target":"BLANK","title_client":"brickman"},{"label":"VIDEO","link":"http:\/\/www.mytalk1071.com\/project-down-dirty-the-video\/","target":"SELF","title_client":"video"},{"label":"LOWRY","link":"http:\/\/www.thelowryuptown.com\/","target":"SELF","title_client":"lowry"},{"label":"FREEHOUSE","link":"http:\/\/www.freehousempls.com\/","target":"SELF","title_client":"freehouse"},{"label":"POPLIFE","link":"http:\/\/www.mytalk1071.com\/shows\/pop-life\/","target":"SELF","title_client":"poplife"},{"label":"POP LIFE","link":"http:\/\/www.mytalk1071.com\/shows\/pop-life\/","target":"SELF","title_client":"pop life"},{"label":"ADVERTISE","link":"http:\/\/www.mytalk1071.com\/pages\/contact-us\/","target":"BLANK","title_client":"advertise"},{"label":"DAILY DIRT","link":"http:\/\/www.mytalk1071.com\/pages\/daily-dirt\/","target":"BLANK","title_client":"daily dirt"},{"label":"LOJ DEALS","link":"http:\/\/twincitiessavers.com\/?rd=fmdining&sta=fm","target":"BLANK","title_client":"loj deals"},{"label":"DEALS","link":"http:\/\/twincitiessavers.com\/?rd=fmdining&sta=fm","target":"BLANK","title_client":"deals"},{"label":"SAVERS","link":"http:\/\/www.twincitiessavers.com\/","target":"BLANK","title_client":"savers"},{"label":"SIMON AND KIM","link":"http:\/\/www.mytalk107.com\/shows\/the-rendezvous\/","target":"SELF","title_client":"simon and kim"},{"label":"BID","link":"http:\/\/twincitiessavers.com\/index.php?rd=auctions","target":"BLANK","title_client":"bid"},{"label":"BRADLEY","link":"http:\/\/www.mytalk1071.com\/shows\/colleen-bradley\/","target":"BLANK","title_client":"bradley"},{"label":"COLLEEN","link":"http:\/\/www.mytalk1071.com\/shows\/colleen-bradley\/","target":"BLANK","title_client":"colleen"},{"label":"PODCAST","link":"https:\/\/www.mytalk1071.com\/pages\/mytalk-107-1-podcasts\/","target":"SELF","title_client":"podcast"},{"label":"REDHOT","link":"http:\/\/www.mytalk1071.com\/shows\/red-hot-real-estate\/","target":"SELF","title_client":"redhot"},{"label":"ITUNES","link":"http:\/\/www.mytalk1071.com\/pages\/rss-subscriptions\/","target":"SELF","title_client":"itunes"},{"label":"MOBILE","link":"http:\/\/mytalk1071.com\/pages\/mobile-app\/","target":"BLANK","title_client":"mobile"},{"label":"APP","link":"http:\/\/mytalk1071.com\/pages\/mobile-app\/","target":"BLANK","title_client":"app"},{"label":"JOY BROWNE","link":"http:\/\/www.drjoy.com\/","target":"BLANK","title_client":"joy browne"},{"label":"DUN","link":"http:\/\/www.mytalk1071.com\/shows\/dishing-up-nutrition\/","target":"BLANK","title_client":"dun"},{"label":"WEEKLY DISH","link":"http:\/\/www.mytalk1071.com\/shows\/weekly-dish\/","target":"BLANK","title_client":"weekly dish"},{"label":"RED HOT REAL ESTATE","link":"http:\/\/www.mytalk1071.com\/shows\/red-hot-real-estate\/","target":"BLANK","title_client":"red hot real estate"},{"label":"SHOP GIRLS","link":"http:\/\/www.mytalk1071.com\/shows\/shop-girls\/","target":"BLANK","title_client":"shop girls"},{"label":"ON DEMAND","link":"http:\/\/www.mytalk1071.com\/pages\/on-demand\/","target":"BLANK","title_client":"on demand"},{"label":"ELIZABETH","link":"http:\/\/www.mytalk1071.com\/shows\/margery-elizabeth\/","target":"BLANK","title_client":"elizabeth"},{"label":"MARGERY","link":"http:\/\/www.mytalk1071.com\/shows\/margery-elizabeth\/","target":"BLANK","title_client":"margery"},{"label":"KATIE K9","link":"http:\/\/www.mytalk1071.com\/shows\/katie-k9\/","target":"BLANK","title_client":"katie k9"},{"label":"JASON","link":"http:\/\/www.mytalk1071.com\/shows\/jason-alexis\/","target":"BLANK","title_client":"jason"},{"label":"JULIA","link":"http:\/\/www.mytalk1071.com\/shows\/lori-julia\/","target":"BLANK","title_client":"julia"},{"label":"LORI","link":"http:\/\/www.mytalk1071.com\/shows\/lori-julia\/","target":"BLANK","title_client":"lori"},{"label":"DONNY","link":"http:\/\/www.mytalk1071.com\/shows\/lori-julia\/","target":"BLANK","title_client":"donny"},{"label":"ALEXIS","link":"http:\/\/www.mytalk1071.com\/shows\/jason-alexis\/","target":"BLANK","title_client":"alexis"},{"label":"FACEBOOK","link":"http:\/\/www.facebook.com\/myTalk1071","target":"BLANK","title_client":"facebook"},{"label":"CAREERS","link":"http:\/\/hubbardbroadcasting.com","target":"SELF","title_client":"careers"},{"label":"EMPLOYMENT","link":"http:\/\/www.mytalk1071.com\/pages\/careers\/","target":"BLANK","title_client":"employment"},{"label":"DISHING UP NUTRITION","link":"http:\/\/www.mytalk1071.com\/shows\/dishing-up-nutrition\/","target":"SELF","title_client":"dishing up nutrition"},{"label":"CONTEST","link":"http:\/\/www.mytalk1071.com\/pages\/online-contests\/","target":"BLANK","title_client":"contest"},{"label":"CONDOR","link":"http:\/\/condorfireplace.com\/","target":"SELF","title_client":"condor"},{"label":"HOME","link":"http:\/\/www.mytalk1071.com\/shows\/home-show\/","target":"SELF","title_client":"home"},{"label":"DAVID","link":"http:\/\/www.mytalk1071.com\/first-equity-mortgage\/","target":"SELF","title_client":"david"},{"label":"DIVORCE","link":"http:\/\/www.tresslerlaw.com\/","target":"SELF","title_client":"divorce"},{"label":"CAL CLOSETS","link":"https:\/\/bit.ly\/2VilCJJ","target":"SELF","title_client":"cal closets"},{"label":"ALS VACUUM","link":"https:\/\/bit.ly\/2VdZwbs","target":"SELF","title_client":"als vacuum"},{"label":"GREAT RIVER DENTAL","link":"https:\/\/bit.ly\/2Rqv5zS","target":"SELF","title_client":"great river dental"},{"label":"YMCA","link":"https:\/\/www.ymcamn.org\/","target":"SELF","title_client":"ymca"},{"label":"SKIN","link":"http:\/\/www.skinrejuvenationclinic.net\/","target":"SELF","title_client":"skin rejuvenation clinic"},{"label":"SHAMBLOTT FAMILY DENTISTRY","link":"http:\/\/www.shamblottfamilydentistry.com\/","target":"SELF","title_client":"shamblott family dentistry"},{"label":"FURNITURE MANOR","link":"http:\/\/www.furnituremanor.com\/","target":"SELF","title_client":"Furniture Manor"},{"label":"STONE SOURCE","link":"http:\/\/www.stonesourceusa.com\/","target":"SELF","title_client":"Stone Source"},{"label":"INVISION","link":"http:\/\/invision-optical.com\/","target":"SELF","title_client":"Invision Optical"},{"label":"LITTLE BLIND SPOT","link":"https:\/\/bit.ly\/2dbrJOI","target":"SELF","title_client":"Little Blind Spot"},{"label":"NUTRISOURCE","link":"http:\/\/www.nutrisourcepetfoods.com\/","target":"SELF","title_client":"Nutrisource"},{"label":"INTIMATE","link":"http:\/\/www.hubbardradio.com\/track\/?sl=hUYN2","target":"BLANK","title_client":"Intimate Treasure Gifts"},{"label":"KIDS","link":"https:\/\/www.mytalk1071.com\/bids-for-kids\/","target":"SELF","title_client":"Bids for Kids"},{"label":"GAME","link":"http:\/\/www.mytalk1071.com\/the-nights-watch-marathon\/","target":"SELF","title_client":""},{"label":"FENCE","link":"http:\/\/www.midwestfence.com\/","target":"SELF","title_client":"Midwest Fence"},{"label":"BLUE PLATE","link":"http:\/\/www.blueplaterestaurantco.com\/","target":"SELF","title_client":"Blue Plate"},{"label":"CAT","link":"http:\/\/www.catfestmn.com\/","target":"SELF","title_client":"Cat Video Festival"},{"label":"AQUARIUS","link":" https:\/\/aquariuswaterconditioning.com\/free-quote\/","target":"SELF","title_client":"AQUARIUS"},{"label":"MAMMO","link":"https:\/\/bit.ly\/2QVfVmw","target":"SELF","title_client":"Breast Center Maple Grove"},{"label":"MOM SHOW","link":"http:\/\/www.mytalk1071.com\/shows\/the-mom-show\/","target":"SELF","title_client":"Mom Show"},{"label":"VEIN","link":"https:\/\/www.mplsvein.com\/?utm_source=gmb_auth","target":"SELF","title_client":"Minneapolis VEIN"},{"label":"EVENTS","link":"http:\/\/www.mytalk1071.com\/pages\/station-events\/","target":"SELF","title_client":"myTalk 107.1"},{"label":"ROSE","link":"http:\/\/www.mytalk1071.com\/shows\/you-get-a-rose\/","target":"SELF","title_client":"You Get a Rose Podcast"},{"label":"EDEALS","link":"http:\/\/www.twincitiessavers.com\/e-deals","target":"SELF","title_client":"EDeals"},{"label":"MOSS ENVY","link":"http:\/\/www.mossenvy.com\/default.asp","target":"SELF","title_client":"Moss Envy"},{"label":"HOPE","link":"http:\/\/www.hazeldenbettyford.org","target":"SELF","title_client":"Hazelden"},{"label":"MARY","link":"http:\/\/www.mytalk1071.com\/mary-tyler-moore-hat-toss\/","target":"SELF","title_client":"myTalk"},{"label":"AMERICAN REFUGEE COMMITTEE","link":"http:\/\/arcrelief.org\/","target":"SELF","title_client":"American Refugee Comittee"},{"label":"CATS","link":"http:\/\/www.catfestmn.com\/","target":"SELF","title_client":"Cat Video Festival"},{"label":"HAMERNICKS","link":"http:\/\/www.hamernicks.com","target":"SELF","title_client":"Hamernicks"},{"label":"ACADEMY","link":"http:\/\/www.hubbarddigitalacademy.com\/","target":"SELF","title_client":"Hubbard Academy"},{"label":"ALLURE","link":"http:\/\/www.allurefits.com","target":"SELF","title_client":"Allure"},{"label":"STL","link":"http:\/\/www.mytalk1071.com\/mytalk-radio-st-louis\/","target":"SELF","title_client":"St Louis myTalk"},{"label":"BE BALANCED","link":"https:\/\/bit.ly\/2ERieRm","target":"SELF","title_client":"BE BALANCED"},{"label":"BOOK CLUB","link":"https:\/\/www.mytalk1071.com\/category\/lorijulia\/bookclub\/","target":"SELF","title_client":"Lori & Julia"},{"label":"VINTAGE SCANDAL","link":"https:\/\/www.mytalk1071.com\/vintage-scandal\/","target":"SELF","title_client":"Lori & Julia"},{"label":"REWARDS","link":"https:\/\/live.mytalk1071.com\/listen\/?utm_source=station-website&utm_medium=widget&utm_campaign=livebar","target":"SELF","title_client":"myTalk Rewards"},{"label":"LISTENER REWARDS","link":"https:\/\/live.mytalk1071.com\/listen\/?utm_source=station-website&utm_medium=widget&utm_campaign=livebar","target":"SELF","title_client":"myTalk Rewards"},{"label":"HOMESTEAD","link":"https:\/\/www.homesteadroad.com\/","target":"SELF","title_client":"Homestead Road"},{"label":"RWANDA","link":"www.wearealight.org","target":"SELF","title_client":"American Refugee Committee"},{"label":"COMEDY","link":"https:\/\/www.mytalk1071.com\/project-down-and-dirty-comedy-live\/","target":"SELF","title_client":"Project Down & Dirty"},{"label":"FAIR","link":"https:\/\/www.mytalk1071.com\/promotions\/join-mytalk107-1-at-the-minnesota-state-fair-2018\/","target":"SELF","title_client":"myTalk "},{"label":"HEARING","link":"https:\/\/www.facebook.com\/AudiologyConcepts\/","target":"SELF","title_client":"Audiology Concepts"},{"label":"DIAPERS","link":"https:\/\/www.mytalk1071.com\/hurricane-michael-diaper-drive","target":"SELF","title_client":"Hurricane Michael - myTalk"},{"label":"ALEXA","link":"https:\/\/live.mytalk1071.com\/listen\/alexa","target":"SELF","title_client":"myTalk"},{"label":"PLUMBER","link":"https:\/\/bit.ly\/2QmNdpZ","target":"SELF","title_client":"Mr. Rooter Plumbing"},{"label":"LEARNINGRX","link":"https:\/\/bit.ly\/2DifaMg","target":"SELF","title_client":"LearningRx"},{"label":"PILATES","link":"https:\/\/bit.ly\/2KmlhR8","target":"SELF","title_client":"Club Pilates "},{"label":"SMILE GEN","link":"http:\/\/www.smilegeneration.com","target":"SELF","title_client":"Smile Generation"},{"label":"MAKE","link":"https:\/\/www.mytalk1071.com\/mattura-goude-family","target":"SELF","title_client":"mytalk"},{"label":"SKIN","link":"http:\/\/www.skinrejuvenationclinic.net\/","target":"SELF","title_client":"Skin Rejuvenation "},{"label":"WINDMILLER","link":"https:\/\/bit.ly\/2BJs2bM","target":"SELF","title_client":"Windmiller Carlson Distinctive Dentistry"},{"label":"CARLSON","link":"https:\/\/bit.ly\/2BJs2bM","target":"SELF","title_client":"Windmiller Carlson Distinctive Dentistry"},{"label":"WINDMILLER CARLSON","link":"https:\/\/bit.ly\/2BJs2bM","target":"SELF","title_client":"Windmiller Carlson Distinctive Dentistry"},{"label":"CRUTCHFIELD","link":"https:\/\/bit.ly\/2RlHfcU","target":"SELF","title_client":"Crutchfield Dermatology"},{"label":"DIVORCE","link":"https:\/\/bit.ly\/2QeFREs","target":"SELF","title_client":"Tressler Law"},{"label":"WEST END","link":"https:\/\/bit.ly\/2Ar9ZY6","target":"SELF","title_client":"The Shop at West End"},{"label":"MAXS","link":"https:\/\/bit.ly\/2VlhbOt","target":"SELF","title_client":"Max\\'s"},{"label":"WATER","link":" https:\/\/aquariuswaterconditioning.com\/free-quote\/","target":"SELF","title_client":"Aquarius"},{"label":"KINETICO","link":" https:\/\/aquariuswaterconditioning.com\/free-quote\/","target":"SELF","title_client":"Aquarius"},{"label":"YETZERS","link":"https:\/\/bit.ly\/2F5BM4w","target":"SELF","title_client":"Yetzer\\'s Home Furnishing and Flororing"},{"label":"CREMATION","link":"https:\/\/bit.ly\/2VVhMH4","target":"SELF","title_client":"Crescent Tide Cremation Services "},{"label":"SPAY NEUTER","link":"https:\/\/www.northwestwisconsinveterinary.com\/","target":"SELF","title_client":"Northwest Wisco Vet"},{"label":"VISION","link":"https:\/\/bit.ly\/2CmuO7Y","target":"SELF","title_client":"Chu Vision Institute "},{"label":"I CAN","link":"https:\/\/www.dnr.state.mn.us\/state_parks\/ican\/index.html","target":"SELF","title_client":"MN DNR"},{"label":"PLUNKETTS ","link":"https:\/\/www.plunketts.net\/","target":"SELF","title_client":"Plunketts"},{"label":"I CAN","link":"https:\/\/www.dnr.state.mn.us\/state_parks\/ican\/index.html","target":"SELF","title_client":"MN DNR"},{"label":"ICAN","link":"https:\/\/www.dnr.state.mn.us\/state_parks\/ican\/index.html","target":"SELF","title_client":"MN DNR"},{"label":"PROFILE","link":"https:\/\/www.profileplan.com\/","target":"SELF","title_client":"Profile"},{"label":"FOOD","link":"https:\/\/www.mytalk1071.com\/food-for-families\/","target":"SELF","title_client":"myTalk Food For Families"},{"label":"SCHNEIDERMANS","link":"https:\/\/www.schneidermans.com\/","target":"SELF","title_client":"Schneidermans"},{"label":"ORIGINAL MATTRESS FACTORY","link":"https:\/\/www.originalmattress.com\/","target":"SELF","title_client":"ORIGINAL MATTRESS FACTORY"},{"label":"PLASTIC SURGERY CONSULTANTS","link":"https:\/\/plasticsurgeryconsultants.net\/","target":"SELF","title_client":"Plastic Surgery Consultants"},{"label":"TANK","link":"https:\/\/www.mytalk1071.com\/promotions\/appy-july-2019","target":"SELF","title_client":"July Appy"},{"label":"42ND STREET","link":"https:\/\/ordway.org\/event\/42nd-street\/","target":"SELF","title_client":"Ordway"},{"label":"BOOKS","link":"https:\/\/windingtrailbooks.com\/","target":"SELF","title_client":"WINDING TRAIL BOOKS"},{"label":"AARP","link":"http:\/\/aarp.cvent.com\/events\/aarp-minnesota-s-free-outdoor-screening-of-a-league-of-their-own-twin-cities\/event-summary-9b1ec3fe96e64c83abfde4e8ebc611b4.aspx","target":"SELF","title_client":"AARP"},{"label":"AUCTION","link":"http:\/\/www.twincitiessavers.com\/category\/auctions\/","target":"SELF","title_client":"Auction"},{"label":"LIGHTING","link":"www.southernlightsinc.com","target":"SELF","title_client":"Southern Lights"},{"label":"ACCESSORIES","link":"www.southernlightsinc.com","target":"SELF","title_client":"Southern Lights"},{"label":"DESIGN","link":"www.southernlightsinc.com","target":"SELF","title_client":"Southern Lights"},{"label":"BATHROOM","link":"www.southernlightsinc.com","target":"SELF","title_client":"Southern Lights"},{"label":"DINING","link":"www.southernlightsinc.com","target":"SELF","title_client":"Southern Lights"},{"label":"HOME REMODEL","link":"www.southernlightsinc.com","target":"SELF","title_client":"Southern Lights"},{"label":"TEAM ALEXIS","link":"http:\/\/main.acsevents.org\/site\/TR?team_id=2465012&fr_id=94458&pg=team","target":"SELF","title_client":"American Cancer Society"},{"label":"CARE","link":"https:\/\/www.care-clinics.com\/","target":"SELF","title_client":"Care Counseling Clinics "},{"label":"SOUTHERN LIGHTS","link":"https:\/\/www.southernlightsinc.com\/","target":"SELF","title_client":"Southern Lights"},{"label":"WINDING TRAIL BOOKS","link":"https:\/\/windingtrailbooks.com\/","target":"SELF","title_client":"Winding Trail Book Club"}];
+
+			jQuery( "#searchsubmit" ).click(function ( e ) {
+				
+				e.preventDefault();
+				var req = jQuery("#keywords").val().trim();
+				var req = req.toUpperCase();
+				var found = false;
+				for (var k in keywords) {
+						if (!keywords.hasOwnProperty(k)) continue;
+						if (keywords[k].label == req) {
+							found = true;
+							if( keywords[k].target == 'SELF' )
+							{	
+								_gaq.push(['_trackEvent','Search', 'Click', keywords[k].link]);
+								setTimeout(function(){window.location.href=keywords[k].link;},400);
+								break;
+								//window.location.href = keywords[k].link;
+							}
+							else
+							{
+								_gaq.push(['_trackEvent','Search', 'Click', keywords[k].link]);
+								setTimeout(function(){window.open(keywords[k].link,'','','');},400);
+								break;
+								//window.open( keywords[k].link );
+							}
+						}
+				}
+				if(found === false){
+					setTimeout(function(){window.location.href = '/?s=' + req;},400);
+					//window.open( keywords[k].link );
+				}
+			});
+			
+			
+            jQuery( "#keywords" ).autocomplete({
+                    minLength: 0,
+                    source: keywords,
+                    focus: function( event, ui ) {
+						jQuery( "#keywords" ).val( ui.item.label );
+						return false;
+                    },
+                    select: function( event, ui ) {
+	                    
+	                    //_gaq.push(['_trackEvent','Keyword - ' + ui.item.title_client, 'Click']);
+	                    
+                        if( ui.item.target == 'SELF' )
+                        {	
+							_gaq.push(['_trackEvent','Search', 'Click', ui.item.link]);
+                            setTimeout(function(){window.location.href=ui.item.link;},400);
+							//location.href = ui.item.link;
+                        }
+                        else
+                        {
+							_gaq.push(['_trackEvent','Search', 'Click', ui.item.link]);
+							setTimeout(function(){window.open(ui.item.link,'','','');},400);
+                            //window.open( ui.item.link );
+                        }
+                    }
+                }).autocomplete( "instance" )._renderItem = function( ul, item ) {
+                return jQuery( "<li>" )
+                .append( "<a>" + item.label + "</a>" )
+                .appendTo( ul );
+                };
+			
+			jQuery( "#keywords" ).keypress(function ( e ) {
+				
+				var req = jQuery("#keywords").val().trim();
+				var req = req.toUpperCase();
+				var found = false;
+				
+				if(e.which == 13) {
+					e.preventDefault();
+					for (var k in keywords) {
+						if (!keywords.hasOwnProperty(k)) continue;
+						if (keywords[k].label == req) {
+							found = true;
+							if( keywords[k].target == 'SELF' ) {	
+								_gaq.push(['_trackEvent','Search', 'Click', keywords[k].link]);
+								setTimeout(function(){window.location.href=keywords[k].link;},400);
+								break;
+								//window.location.href = keywords[k].link;
+							}
+							else{
+								_gaq.push(['_trackEvent','Search', 'Click', keywords[k].link]);
+								setTimeout(function(){window.open(keywords[k].link,'','','');},400);
+								break;
+								//window.open( keywords[k].link );
+							}
+						}
+					}
+					if(found === false){
+						setTimeout(function(){window.location.href = '/?s=' + req;},400);
+						//window.open( keywords[k].link );
+					}
+				}
+			});
+	
+	
+</script>
+<input type='text' id='keywords' size='45' value="Keyword and Search" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"><input type="submit" id="searchsubmit" value="">       </nav><!-- /navigation -->
+       	</header><!-- /header -->
+</div><!-- /header-wrap -->
+
+
+    
+<div id="wrap"> 
+
+<div id="main-content" class="outerbox clearfix fitvids ">
+  
+	<a class="hll-livebar-widget"></a>
+
+	
+<div id="post" class="clearfix">
+	<div class="container clearfix">
+		        <div id="single-media-wrap">
+				<img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2017/10/Diary-630x420.jpg" alt="Jason and Alexis: Dear Diary 10/6/17" id="post-thumbnail" />
+
+
+
+
+        </div><!-- /single-media-wrap -->
+        
+        	<a href="https://mytalk.wpengine.com/author/jasonalexis/" ><div id="author-image">
+               <img alt='The Jason &amp; Alexis Show' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/JA_author_250x250-150x150.png' class='avatar avatar-150 photo' height='150' width='150' />            </div></a>
+            
+		<header id="single-heading">
+			<h1>Jason and Alexis: Dear Diary 10/6/17</h1>
+			<section class="meta clearfix" id="single-meta">
+				<ul>
+					<li class="meta-single-date"><span class="icon-calendar"></span>October 9, 2017</li>    
+					<!--<li class="meta-single-cat"><span class="icon-folder-open"></span><a href="https://www.mytalk1071.com/category/mytalk/homepage/" rel="category tag">homepage</a> / <a href="https://www.mytalk1071.com/category/jasonalexis/" rel="category tag">jasonalexis</a> / <a href="https://www.mytalk1071.com/category/mytalk/" rel="category tag">mytalk</a></li> -->
+                    
+                   <li class="meta-single-cat"><span class="fa fa-eye" style='font-size: 14px;'></span> 1,764 Views
+                    <!--<li class="meta-single-cat"><span class="fa fa-eye" style='font-size: 14px;'></span> 
+					[hbi_read_count id="79504" link="/jason-alexis-dear-diary-10617/" date="2017-10-09"]-->
+				</li> 
+					<li class="meta-single-user"><span class="icon-user"></span><a href="https://www.mytalk1071.com/author/jasonalexis/" title="Posts by The Jason &#038; Alexis Show" rel="author">The Jason &#38; Alexis Show</a></li>
+										<li class="meta-single-zilla-likes"><a href="#" class="zilla-likes" id="zilla-likes-79504" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a></li>				</ul>
+			</section><!--/meta -->
+		</header><!-- /single-meta -->
+        
+        <article class="entry clearfix">
+            <p>Alexis and Dawn have found their diaries from age 10-high school.  Right now, they are at about age 12 &amp; 13.  Here are our tween voice actors reading them!  It&#8217;s all about raking leaves and Kirk Cameron this time. <iframe style="width: 100%;" src="https://www.mytalk1071.com/futuriembed/981/" width="100%" height="120" frameborder="no" scrolling="no"></iframe></p>
+<a href="#" class="zilla-likes" id="zilla-likes-79504" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a>        </article><!-- /entry -->
+        
+                
+        <div class="post-tags clearfix"><a href="https://www.mytalk1071.com/tag/dear-diary/" rel="tag">Dear Diary</a><a href="https://www.mytalk1071.com/tag/jason-alexis/" rel="tag">Jason &amp; Alexis</a></div>        
+                <div id="single-author" class="clearfix">
+            <!--<div id="author-image">
+               <img alt='The Jason &amp; Alexis Show' src='http://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/JA_author_250x250-60x60.png' class='avatar avatar-60 photo' height='60' width='60' />            </div><!-- author-image --> 
+            <div id="author-bio" style="float:none;" >
+                <h4><a href="http://mytalk.wpengine.com/shows/jason-alexis/">The Jason &amp; Alexis Show</a></h4>
+                <p class="author_desc">Listen to Jason &amp; Alexis weekdays from 5am to 9am on myTalk 107.1.</p>
+				<p><a href="http://mytalk.wpengine.com/shows/jason-alexis/">Jason & Alexis</a> | <a href="mailto:jasonalexis@mytalk1071.com">Email</a> | <a href="https://www.twitter.com/mytalk1071/" target="_blank">@mytalk1071</a> 
+                </p>
+                
+            </div><!-- author-bio -->
+        </div><!-- /single-author -->
+                
+		        <div id="single-share" class="clearfix">
+        	<h4><span class="icon-plus"></span>Share This Post</h4>
+            <div class="share-btns">
+                <div class="fb-like" data-send="false" data-show-faces="false" data-layout="button_count"></div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+                <div class="g-plusone" data-size="medium"></div>
+                <a data-pin-config="none" href="//pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+            </div><!-- /share-btns -->
+        </div><!-- /single-share -->
+                
+	        
+	</div><!-- /container -->
+        
+        <!-- <nav id="single-nav" class="clearfix"> 
+            <div id="single-nav-left"><a href="https://www.mytalk1071.com/01009-monday-hour-1-jason-and-alexis/" rel="next"><span class="icon-chevron-left"></span>Previous Post</a></div>            <div id="single-nav-right"><a href="https://www.mytalk1071.com/lori-julia-show-links-monday-october-9-2017/" rel="prev">Next Post<span class="icon-chevron-right"></span></a></div>        </nav> single-nav -->
+        
+                
+</div><!-- /post -->
+
+
+		
+			<div id="sidebar" class="admods container ">
+						<div class='widget dfp_ad_unit_widget'>      <div id="ad-unit-300_600_feed_6">        <script type='text/javascript'>          googletag.cmd.push(function () {            googletag.display('ad-unit-300_600_feed_6');          });        </script>      </div>      </div><div class="widget_text sidebar-box widget_custom_html clearfix"><h4><span>myTalk on Twitter</span></h4><div class="textwidget custom-html-widget"><a href="https://twitter.com/mytalk1071/lists/mytalk-tweeters?ref_src=twsrc%5Etfw" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://twitter.com/mytalk1071/lists/mytalk-tweeters?ref_src=twsrc%5Etfw', 'A Twitter List by mytalk1071']);" class="twitter-timeline" data-width="300" data-height="700">A Twitter List by mytalk1071</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div></div>					</div>
+		<!-- /sidebar -->
+	
+
+	
+	<!-- This is the old 'related posts' code -->
+	 		  
+
+
+	<div class="clear"></div>
+	<section id="related-posts">
+		<div id="related-heading">
+						<h4><span>More Posts</span></h4>
+		</div>
+		<div id="wpex-grid-wrap">
+			
+ 
+<article class="loop-entry container post-93966 post type-post status-publish format-standard has-post-thumbnail hentry category-homepage category-ja-audo category-jasonalexis category-mytalk tag-alexis tag-bday tag-birthday-prank tag-dawn tag-jason tag-jason-alexis tag-prank" class='home-sidebar'>  
+	<div style='margin-bottom: 5px;'><span class="icon-calendar"></span> MAY 22ND, 2019</div>
+	        <a href="https://www.mytalk1071.com/birthdaypranks/" title="Birthday Prank tutor blames parents" class="loop-entry-img-link">
+        	<img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/myTalk_BirthdayPrank_3000x3000-440x440.jpg" alt="Birthday Prank tutor blames parents" />
+            <div class="entry-overlay"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/images/thumbnail.png" style="width:20px;"/></div>
+        </a>
+    					<div class='feed_author_info'>
+									<div class='feed_author_img'><a href="https://mytalk.wpengine.com/author/jasonalexis/" ><img alt='The Jason &amp; Alexis Show' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/JA_author_250x250-150x150.png' class='avatar avatar-150 photo' height='150' width='150' /></a></div>
+								<div class='feed_author_name'>By: <a href="https://mytalk.wpengine.com/author/jasonalexis/" >The Jason &#38; Alexis Show</a></div>
+				<div class='clear'></div>
+			</div>
+				<h2><a href="https://www.mytalk1071.com/birthdaypranks/" title="Birthday Prank tutor blames parents">Birthday Prank tutor blames parents</a></h2>
+		<div class="entry-text">
+			<p>PLUS more Birthday Pranks! </p>
+<a href="#" class="zilla-likes" id="zilla-likes-93966" title="Like this"><span class="zilla-likes-count">2</span> <span class="zilla-likes-postfix"></span></a>           <ul class="loop-entry-meta clearfix">
+           
+           <li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 4,161 Views </li>
+				<!--<li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 
+					[hbi_read_count id="93966" link="/birthdaypranks/" date="2019-05-22"]				</li>-->
+                    
+								<li>
+                	<div class="fb-like" data-href="https://www.mytalk1071.com/birthdaypranks/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<!-- Facebook like button 
+					<div class="addthis_native_toolbox"></div> -->
+				</li>
+				<li class="meta-zilla-likes"><a href="#" class="zilla-likes" id="zilla-likes-93966" title="Like this"><span class="zilla-likes-count">2</span> <span class="zilla-likes-postfix"></span></a></li>			</ul> <!-- /loop-entry-meta -->
+		</div><!-- /entry-text -->
+	</article><!-- /entry -->
+
+
+ 
+<article class="loop-entry container post-101469 post type-post status-publish format-standard has-post-thumbnail hentry category-homepage category-jasonalexis category-mytalk category-uncategorized tag-andy-cowan tag-banging-my-head-against-the-wall tag-books tag-jason-alexis tag-seinfeld tag-writing" class='home-sidebar'>  
+	<div style='margin-bottom: 5px;'><span class="icon-calendar"></span> JUNE 27TH, 2018</div>
+	        <a href="https://www.mytalk1071.com/banging-head-wall-comedy-writers-guide-seeing-stars/" title="Banging My Head Against the Wall: A Comedy Writers Guide to Seeing Stars" class="loop-entry-img-link">
+        	<img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/BangingMyHeadAgainsttheWalleimage-440x664.jpg" alt="Banging My Head Against the Wall: A Comedy Writers Guide to Seeing Stars" />
+            <div class="entry-overlay"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/images/thumbnail.png" style="width:20px;"/></div>
+        </a>
+    					<div class='feed_author_info'>
+									<div class='feed_author_img'><a href="https://mytalk.wpengine.com/author/dmcclain/" ><img alt='Dawn McClain' src='http://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Dawn-McClain_avatar_1483717379.png' class='avatar avatar-150 photo' height='150' width='150' /></a></div>
+								<div class='feed_author_name'>By: <a href="https://mytalk.wpengine.com/author/dmcclain/" >Dawn McClain</a></div>
+				<div class='clear'></div>
+			</div>
+				<h2><a href="https://www.mytalk1071.com/banging-head-wall-comedy-writers-guide-seeing-stars/" title="Banging My Head Against the Wall: A Comedy Writers Guide to Seeing Stars">Banging My Head Against the Wall: A Comedy Writers Guide to Seeing Stars</a></h2>
+		<div class="entry-text">
+			<p>Jason and Alexis had the pleasure of talking with writer Andy Cowan this morning.  He&#8230;</p>
+<a href="#" class="zilla-likes" id="zilla-likes-101469" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a>           <ul class="loop-entry-meta clearfix">
+           
+           <li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 251 Views </li>
+				<!--<li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 
+					[hbi_read_count id="101469" link="/banging-head-wall-comedy-writers-guide-seeing-stars/" date="2018-06-27"]				</li>-->
+                    
+								<li>
+                	<div class="fb-like" data-href="https://www.mytalk1071.com/banging-head-wall-comedy-writers-guide-seeing-stars/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<!-- Facebook like button 
+					<div class="addthis_native_toolbox"></div> -->
+				</li>
+				<li class="meta-zilla-likes"><a href="#" class="zilla-likes" id="zilla-likes-101469" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a></li>			</ul> <!-- /loop-entry-meta -->
+		</div><!-- /entry-text -->
+	</article><!-- /entry -->
+
+
+ 
+<article class="loop-entry container post-93446 post type-post status-publish format-standard has-post-thumbnail hentry category-homepage category-jasonalexis category-mytalk tag-dear-diary" class='home-sidebar'>  
+	<div style='margin-bottom: 5px;'><span class="icon-calendar"></span> MARCH 30TH, 2018</div>
+	        <a href="https://www.mytalk1071.com/little-dawns-mega-bored-little-alexis-getting-trouble/" title="Little Dawn&#8217;s MEGA BORED and Little Alexis is getting in trouble&#8230;again" class="loop-entry-img-link">
+        	<img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/myTalk_DearDiary_SocialPost-440x440.png" alt="Little Dawn&#8217;s MEGA BORED and Little Alexis is getting in trouble&#8230;again" />
+            <div class="entry-overlay"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/images/thumbnail.png" style="width:20px;"/></div>
+        </a>
+    					<div class='feed_author_info'>
+									<div class='feed_author_img'><a href="https://mytalk.wpengine.com/author/jasonalexis/" ><img alt='The Jason &amp; Alexis Show' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/JA_author_250x250-150x150.png' class='avatar avatar-150 photo' height='150' width='150' /></a></div>
+								<div class='feed_author_name'>By: <a href="https://mytalk.wpengine.com/author/jasonalexis/" >The Jason &#38; Alexis Show</a></div>
+				<div class='clear'></div>
+			</div>
+				<h2><a href="https://www.mytalk1071.com/little-dawns-mega-bored-little-alexis-getting-trouble/" title="Little Dawn&#8217;s MEGA BORED and Little Alexis is getting in trouble&#8230;again">Little Dawn&#8217;s MEGA BORED and Little Alexis is getting in trouble&#8230;again</a></h2>
+		<div class="entry-text">
+			<p>It&#8217;s FriYAY and time for Dear Diary &#8212; diary entries Little Alexis and Little Dawn&#8230;</p>
+<a href="#" class="zilla-likes" id="zilla-likes-93446" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a>           <ul class="loop-entry-meta clearfix">
+           
+           <li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 150 Views </li>
+				<!--<li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 
+					[hbi_read_count id="93446" link="/little-dawns-mega-bored-little-alexis-getting-trouble/" date="2018-03-30"]				</li>-->
+                    
+								<li>
+                	<div class="fb-like" data-href="https://www.mytalk1071.com/little-dawns-mega-bored-little-alexis-getting-trouble/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<!-- Facebook like button 
+					<div class="addthis_native_toolbox"></div> -->
+				</li>
+				<li class="meta-zilla-likes"><a href="#" class="zilla-likes" id="zilla-likes-93446" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a></li>			</ul> <!-- /loop-entry-meta -->
+		</div><!-- /entry-text -->
+	</article><!-- /entry -->
+
+
+ 
+<article class="loop-entry container post-102988 post type-post status-publish format-standard has-post-thumbnail hentry category-homepage category-jasonalexis category-mytalk tag-jason-alexis" class='home-sidebar'>  
+	<div style='margin-bottom: 5px;'><span class="icon-calendar"></span> JULY 19TH, 2018</div>
+	        <a href="https://www.mytalk1071.com/whos-control-car-stereo/" title="Who&#8217;s In Control of The Car Stereo?" class="loop-entry-img-link">
+        	<img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/Car-Stereo-Debate-440x293.jpg" alt="Who&#8217;s In Control of The Car Stereo?" />
+            <div class="entry-overlay"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/images/thumbnail.png" style="width:20px;"/></div>
+        </a>
+    					<div class='feed_author_info'>
+									<div class='feed_author_img'><a href="https://mytalk.wpengine.com/author/dmcclain/" ><img alt='Dawn McClain' src='http://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Dawn-McClain_avatar_1483717379.png' class='avatar avatar-150 photo' height='150' width='150' /></a></div>
+								<div class='feed_author_name'>By: <a href="https://mytalk.wpengine.com/author/dmcclain/" >Dawn McClain</a></div>
+				<div class='clear'></div>
+			</div>
+				<h2><a href="https://www.mytalk1071.com/whos-control-car-stereo/" title="Who&#8217;s In Control of The Car Stereo?">Who&#8217;s In Control of The Car Stereo?</a></h2>
+		<div class="entry-text">
+			<p>Jason had some strong opinions about who is in control of the radio.  In his&#8230;</p>
+<a href="#" class="zilla-likes" id="zilla-likes-102988" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a>           <ul class="loop-entry-meta clearfix">
+           
+           <li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 106 Views </li>
+				<!--<li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 
+					[hbi_read_count id="102988" link="/whos-control-car-stereo/" date="2018-07-19"]				</li>-->
+                    
+								<li>
+                	<div class="fb-like" data-href="https://www.mytalk1071.com/whos-control-car-stereo/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<!-- Facebook like button 
+					<div class="addthis_native_toolbox"></div> -->
+				</li>
+				<li class="meta-zilla-likes"><a href="#" class="zilla-likes" id="zilla-likes-102988" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a></li>			</ul> <!-- /loop-entry-meta -->
+		</div><!-- /entry-text -->
+	</article><!-- /entry -->
+
+
+ 
+<article class="loop-entry container post-15125 post type-post status-publish format-standard has-post-thumbnail hentry category-entertainment category-homepage category-jasonalexis category-local category-win tag-jason-alexis" class='home-sidebar'>  
+	<div style='margin-bottom: 5px;'><span class="icon-calendar"></span> JANUARY 5TH, 2015</div>
+	        <a href="https://www.mytalk1071.com/jason-alexis-now-replaying-7-10pm-weeknights/" title="Jason &#038; Alexis now replaying 7-10pm weeknights!" class="loop-entry-img-link">
+        	<img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2015/01/10888689-1046292085396181-4353090076973506912-n-440x440.jpg" alt="Jason &#038; Alexis now replaying 7-10pm weeknights!" />
+            <div class="entry-overlay"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/images/thumbnail.png" style="width:20px;"/></div>
+        </a>
+    					<div class='feed_author_info'>
+									<div class='feed_author_img'><a href="https://mytalk.wpengine.com/author/mytalk/" ><img alt='myTalk 107.1' src='http://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/myTalk-107.1_avatar_1492837640.png' class='avatar avatar-150 photo' height='150' width='150' /></a></div>
+								<div class='feed_author_name'>By: <a href="https://mytalk.wpengine.com/author/mytalk/" >myTalk 107.1</a></div>
+				<div class='clear'></div>
+			</div>
+				<h2><a href="https://www.mytalk1071.com/jason-alexis-now-replaying-7-10pm-weeknights/" title="Jason &#038; Alexis now replaying 7-10pm weeknights!">Jason &#038; Alexis now replaying 7-10pm weeknights!</a></h2>
+		<div class="entry-text">
+			<p>Great news! If you ever miss Jason &amp; Alexis in the morning on myTalk 107.1,&#8230;</p>
+<a href="#" class="zilla-likes" id="zilla-likes-15125" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a>           <ul class="loop-entry-meta clearfix">
+           
+           <li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 144 Views </li>
+				<!--<li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 
+					[hbi_read_count id="15125" link="/jason-alexis-now-replaying-7-10pm-weeknights/" date="2015-01-05"]				</li>-->
+                    
+								<li>
+                	<div class="fb-like" data-href="https://www.mytalk1071.com/jason-alexis-now-replaying-7-10pm-weeknights/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<!-- Facebook like button 
+					<div class="addthis_native_toolbox"></div> -->
+				</li>
+				<li class="meta-zilla-likes"><a href="#" class="zilla-likes" id="zilla-likes-15125" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a></li>			</ul> <!-- /loop-entry-meta -->
+		</div><!-- /entry-text -->
+	</article><!-- /entry -->
+
+
+ 
+<article class="loop-entry container post-93091 post type-post status-publish format-standard has-post-thumbnail hentry category-homepage category-jasonalexis category-mytalk tag-dear-diary" class='home-sidebar'>  
+	<div style='margin-bottom: 5px;'><span class="icon-calendar"></span> MARCH 26TH, 2018</div>
+	        <a href="https://www.mytalk1071.com/dear-diary-puberty-episode/" title="Dear Diary: The Puberty Episode" class="loop-entry-img-link">
+        	<img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/myTalk_DearDiary_SocialPost-440x440.png" alt="Dear Diary: The Puberty Episode" />
+            <div class="entry-overlay"><img src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/hbi-fahsionista-child/images/thumbnail.png" style="width:20px;"/></div>
+        </a>
+    					<div class='feed_author_info'>
+									<div class='feed_author_img'><a href="https://mytalk.wpengine.com/author/dmcclain/" ><img alt='Dawn McClain' src='http://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Dawn-McClain_avatar_1483717379.png' class='avatar avatar-150 photo' height='150' width='150' /></a></div>
+								<div class='feed_author_name'>By: <a href="https://mytalk.wpengine.com/author/dmcclain/" >Dawn McClain</a></div>
+				<div class='clear'></div>
+			</div>
+				<h2><a href="https://www.mytalk1071.com/dear-diary-puberty-episode/" title="Dear Diary: The Puberty Episode">Dear Diary: The Puberty Episode</a></h2>
+		<div class="entry-text">
+			<p>This episode had to have an understudy due to &#8220;sensitive material&#8221;.  Dawn is very irritated&#8230;</p>
+<a href="#" class="zilla-likes" id="zilla-likes-93091" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a>           <ul class="loop-entry-meta clearfix">
+           
+           <li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 300 Views </li>
+				<!--<li class="meta-date"><span class="fa fa-eye" style='font-size: 14px;'></span> 
+					[hbi_read_count id="93091" link="/dear-diary-puberty-episode/" date="2018-03-26"]				</li>-->
+                    
+								<li>
+                	<div class="fb-like" data-href="https://www.mytalk1071.com/dear-diary-puberty-episode/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<!-- Facebook like button 
+					<div class="addthis_native_toolbox"></div> -->
+				</li>
+				<li class="meta-zilla-likes"><a href="#" class="zilla-likes" id="zilla-likes-93091" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a></li>			</ul> <!-- /loop-entry-meta -->
+		</div><!-- /entry-text -->
+	</article><!-- /entry -->
+
+			</div><!-- /wpex-grid-wrap -->
+	</section> 
+	<!-- /related-posts --> 
+
+
+	
+<div class="clear"></div>
+</div><!-- /main-content -->
+</div><!-- /wrap -->
+
+<div id="footer-wrap">
+				<footer id="footer" class="outerbox">
+			<div id="footer-widgets" class="clearfix">
+				<div class="footer-box">
+					<div class='widget dfp_ad_unit_widget'>      <div id="ad-unit-300_250_footer">        <script type='text/javascript'>          googletag.cmd.push(function () {            googletag.display('ad-unit-300_250_footer');          });        </script>      </div>      </div>				</div>
+				<!-- /footer-one -->
+				<div class="footer-box">
+					<div class="footer-widget widget_text clearfix">			<div class="textwidget"><img src="http://www.twincitiessavers.com/wp-content/uploads/2016/09/save.png" style="margin-bottom:-25px;" /></div>
+		</div><div class="footer-widget widget_text clearfix">			<div class="textwidget"><div class="footer-deal-list"><div class="footer-deal-item">
+								<div class="footer-deal-image">
+								  <a href="http://kstpam1.hubbarddeals.com/promodetails.php?h=3938971&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpam1.hubbarddeals.com/promodetails.php?h=3938971&amp;src=inline', '']);" target="_blank"><img alt="Deal Image" title="Deal Image" src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/229992-70x70.png" width="70" height="55"></a>
+								</div>
+								<div class="footer-deal-description">
+									<h5 class="footer-deal-title">
+										<a href="http://kstpam1.hubbarddeals.com/promodetails.php?h=3938971&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpam1.hubbarddeals.com/promodetails.php?h=3938971&amp;src=inline', 'Bodies By Burgoon']);" target="_blank">Bodies By Burgoon</a>
+									</h5>
+							    <p class="footer-deal-body">$150 value for $75<br>3 remain, <strong><a href="http://kstpam1.hubbarddeals.com/promodetails.php?h=3938971&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpam1.hubbarddeals.com/promodetails.php?h=3938971&amp;src=inline', 'click here']);" target="_blank">click here</a></strong></p>
+							  </div>
+							</div><div class="footer-deal-item">
+								<div class="footer-deal-image">
+								  <a href="http://kstpam1.hubbarddeals.com/promodetails.php?h=4783598&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpam1.hubbarddeals.com/promodetails.php?h=4783598&amp;src=inline', '']);" target="_blank"><img alt="Deal Image" title="Deal Image" src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/225302-70x70.png" width="70" height="40"></a>
+								</div>
+								<div class="footer-deal-description">
+									<h5 class="footer-deal-title">
+										<a href="http://kstpam1.hubbarddeals.com/promodetails.php?h=4783598&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpam1.hubbarddeals.com/promodetails.php?h=4783598&amp;src=inline', 'CellSpark']);" target="_blank">CellSpark</a>
+									</h5>
+							    <p class="footer-deal-body">$200 value for $100<br>23 remain, <strong><a href="http://kstpam1.hubbarddeals.com/promodetails.php?h=4783598&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpam1.hubbarddeals.com/promodetails.php?h=4783598&amp;src=inline', 'click here']);" target="_blank">click here</a></strong></p>
+							  </div>
+							</div><div class="footer-deal-item">
+								<div class="footer-deal-image">
+								  <a href="http://kstpfm1.hubbarddeals.com/promodetails.php?h=1134529&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpfm1.hubbarddeals.com/promodetails.php?h=1134529&amp;src=inline', '']);" target="_blank"><img alt="Deal Image" title="Deal Image" src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/226860-70x70.jpg" width="70" height="70"></a>
+								</div>
+								<div class="footer-deal-description">
+									<h5 class="footer-deal-title">
+										<a href="http://kstpfm1.hubbarddeals.com/promodetails.php?h=1134529&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpfm1.hubbarddeals.com/promodetails.php?h=1134529&amp;src=inline', 'Wild Mountain']);" target="_blank">Wild Mountain</a>
+									</h5>
+							    <p class="footer-deal-body">$50 value for $25<br>142 remain, <strong><a href="http://kstpfm1.hubbarddeals.com/promodetails.php?h=1134529&src=inline" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://kstpfm1.hubbarddeals.com/promodetails.php?h=1134529&amp;src=inline', 'click here']);" target="_blank">click here</a></strong></p>
+							  </div>
+							</div></div></div>
+		</div>				</div>
+				<!-- /footer-two -->
+				<div class="footer-box remove-margin">
+					<div class="footer-widget widget_text clearfix">			<div class="textwidget"><img src="http://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/win.png" style="margin-bottom:-25px;" /></div>
+		</div><div class="footer-widget widget_text clearfix">			<div class="textwidget"><div class="footer-contest-list"><div class="footer-contest-item">
+								<div class="footer-contest-image">
+								  <a href="https://woobox.com/ewcfj3" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://woobox.com/ewcfj3', '']);" target="_blank"><img alt="Contest Image" title="Contest Image" src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/RedReabit_HappyHour_Sweepstakes_V2-70x70.png" width="70" height="70"></a>
+								</div>
+								<div class="footer-contest-description">
+									<h5 class="footer-contest-title">
+										<a href="https://woobox.com/ewcfj3" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://woobox.com/ewcfj3', 'Win Happy Hour for a Year from Red Rabbit!']);" target="_blank">Win Happy Hour for a Year from Red Rabbit!</a>
+									</h5>
+							    <p class="footer-contest-body">In celebration of our new Happy Hour menu, we are giving you the chance to win Happy Hour for a Year at Red Rabbit! Added bonus: Share your Red Rabbit experience photo for a chance to be featured on our social!</p>
+							  </div>
+							</div><div class="footer-contest-item">
+								<div class="footer-contest-image">
+								  <a href="https://woobox.com/eb7zvr" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://woobox.com/eb7zvr', '']);" target="_blank"><img alt="Contest Image" title="Contest Image" src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/MGM_GrillChillDrillSummerSweepstakes_350x350-70x70.png" width="70" height="70"></a>
+								</div>
+								<div class="footer-contest-description">
+									<h5 class="footer-contest-title">
+										<a href="https://woobox.com/eb7zvr" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://woobox.com/eb7zvr', 'Grill, Chill, &#038; Drill Summer Sweepstakes']);" target="_blank">Grill, Chill, &#038; Drill Summer Sweepstakes</a>
+									</h5>
+							    <p class="footer-contest-body">MGM wants to give YOU a chance to win the ultimate summer prize pack! Enter for your chance to WIN a Weber grill with Jack Daniel's smoking chips, Coors Light YETI Hopper cooler, DeWalt cordless drill, and a $50 gift card from your friends at MGM Wine & Spirits.</p>
+							  </div>
+							</div><div class="footer-contest-item">
+								<div class="footer-contest-image">
+								  <a href="http://www.twincitieshub.com/mdh2019/" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://www.twincitieshub.com/mdh2019/', '']);" target="_blank"><img alt="Contest Image" title="Contest Image" src="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/MDHWIC_SeaLifeSweeps_350Share_v2-70x70.png" width="70" height="70"></a>
+								</div>
+								<div class="footer-contest-description">
+									<h5 class="footer-contest-title">
+										<a href="http://www.twincitieshub.com/mdh2019/" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://www.twincitieshub.com/mdh2019/', 'Win an annual family pass to Sea Life at MOA from Minnesota Department of Health']);" target="_blank">Win an annual family pass to Sea Life at MOA from Minnesota Department of Health</a>
+									</h5>
+							    <p class="footer-contest-body">Win an annual family pass to Sea Life at MOA from Minnesota Department of Health!</p>
+							  </div>
+							</div></div></div>
+		</div>				</div>
+				<!-- /footer-three -->
+			</div>
+			<!-- /footer-widgets -->
+
+			<div id="footer-links">
+				<ul id="menu-footer-links" class="footer-menu"><li id="menu-item-60990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60990"><a href="https://www.mytalk1071.com/pages/rss-subscriptions/">RSS</a></li>
+<li id="menu-item-60991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60991"><a href="https://www.mytalk1071.com/pages/contact-us/">Contact Us</a></li>
+<li id="menu-item-60992" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60992"><a href="https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/12_1_18CombinedPublic-File-Report.pdf" onclick="_gaq.push(['_trackEvent','download','https://www.mytalk1071.com/wp-content/uploads/2014/08/12_1_18CombinedPublic-File-Report.pdf']);" >Public EEO File</a></li>
+<li id="menu-item-60993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60993"><a href="https://publicfiles.fcc.gov/fm-profile/ktmy" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://publicfiles.fcc.gov/fm-profile/ktmy', 'Online Public File']);" >Online Public File</a></li>
+<li id="menu-item-60994" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60994"><a href="http://corporate.hubbardradio.com/terms-of-use/" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://corporate.hubbardradio.com/terms-of-use/', 'Terms of Use']);" >Terms of Use</a></li>
+<li id="menu-item-60995" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60995"><a href="http://corporate.hubbardradio.com/privacy-policy/" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://corporate.hubbardradio.com/privacy-policy/', 'Privacy Statement']);" >Privacy Statement</a></li>
+<li id="menu-item-60996" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60996"><a href="http://corporate.hubbardradio.com/dmca-notice/" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://corporate.hubbardradio.com/dmca-notice/', 'DMCA Notice']);" >DMCA Notice</a></li>
+<li id="menu-item-60997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60997"><a href="http://www.mytalk1071.com/pages/online-contests/#rules">Contest Rules</a></li>
+</ul>			</div>
+			<div id="copyright">
+				&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> KTMY-FM, LLC.
+				<div style="width: 100%; line-height: 18px !important; word-wrap: break-word; margin-bottom: 10px;">This web site is not intended for users located within the European Economic Area.</div>
+			</div><!-- /copyright -->
+
+		</footer>
+	<!-- /footer -->
+		<div id="footer-bottom">
+		<div class="outerbox clearfix">
+
+						<div class="footerboard_ad" style="padding-top:8px;margin-right:auto;margin-left:auto;margin-bottom:8px;max-width:728px;">
+                <div id="ad-unit-728_90_footer" class="adslot">
+                    <script type="text/javascript">
+                        googletag.cmd.push(function() { googletag.display('ad-unit-728_90_footer'); });
+                    </script>
+                </div>
+            </div>
+		</div>
+		</div><!-- /outerbox -->
+	</div><!-- /footer-bottom -->
+	</div><!-- /footer-wrap -->
+<a href="#toplink" id="toplink"><span class="icon-chevron-up"></span></a>
+
+<div id="ttdUniversalPixelTag527b0a5abab241918e9b10fc5f364d82" style="display:none">
+        <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            (function(global) {
+                if (typeof TTDUniversalPixelApi === 'function') {
+                    var universalPixelApi = new TTDUniversalPixelApi();
+                    universalPixelApi.init("eac6kka", ["msqi0ya"], "https://insight.adsrvr.org/track/up", "ttdUniversalPixelTag527b0a5abab241918e9b10fc5f364d82");
+                }
+            })(this);
+        </script>
+    </div>
+<!-- /retargeting pixel -->
+
+	<!-- google plus button -->
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+	<!-- twitter share button -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	<!-- facebook like button -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, "script", "facebook-jssdk"));</script>
+
+	<!-- pinterest share button -->
+	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+
+
+<script src="//live.mytalk1071.com/wp-content/uploads/hll-widgets/main.min.js"></script>
+
+<script type="text/html" id="tmpl-wp-playlist-current-item">
+	<# if ( data.image ) { #>
+	<img src="{{ data.thumb.src }}" alt="" />
+	<# } #>
+	<div class="wp-playlist-caption">
+		<span class="wp-playlist-item-meta wp-playlist-item-title">&#8220;{{ data.title }}&#8221;</span>
+		<# if ( data.meta.album ) { #><span class="wp-playlist-item-meta wp-playlist-item-album">{{ data.meta.album }}</span><# } #>
+		<# if ( data.meta.artist ) { #><span class="wp-playlist-item-meta wp-playlist-item-artist">{{ data.meta.artist }}</span><# } #>
+	</div>
+</script>
+<script type="text/html" id="tmpl-wp-playlist-item">
+	<div class="wp-playlist-item">
+		<a class="wp-playlist-caption" href="{{ data.src }}">
+			{{ data.index ? ( data.index + '. ' ) : '' }}
+			<# if ( data.caption ) { #>
+				{{ data.caption }}
+			<# } else { #>
+				<span class="wp-playlist-item-title">&#8220;{{{ data.title }}}&#8221;</span>
+				<# if ( data.artists && data.meta.artist ) { #>
+				<span class="wp-playlist-item-artist"> &mdash; {{ data.meta.artist }}</span>
+				<# } #>
+			<# } #>
+		</a>
+		<# if ( data.meta.length_formatted ) { #>
+		<div class="wp-playlist-item-length">{{ data.meta.length_formatted }}</div>
+		<# } #>
+	</div>
+</script>
+<!--[if IE 7]><style>
+.wpv-pagination { *zoom: 1; }
+</style><![endif]-->
+<a href=""><div id="royal_prettyphoto_tab" class="royal_prettyphoto_contents royal_prettyphoto_left"></div></a><script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hbi-futuri-post/public/dist/js/plugins-min.js?ver=1.5.5'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=4.9.10'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/hbi-futuri-post/public/dist/js/post-min.js?ver=1.5.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sb_instagram_js_options = {"sb_instagram_at":"4735914372.3a81a9f.aff2ef58ea6b439fa678e76a70800e36"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/instagram-feed/js/sb-instagram.min.js?ver=1.6.2'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/responsive-image-maps/jquery.rwdImageMaps.min.js?ver=1.5'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/js/plugins.js?ver=4.9.10'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpexvars = {"ajaxurl":"https:\/\/www.mytalk1071.com\/wp-admin\/admin-ajax.php","loading":"loading...","loadmore":"load more"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/themes/wpex-fashionista/js/global.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":0,"isRTL":false});});
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/wp-util.min.js?ver=4.9.10'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/backbone.min.js?ver=1.2.3'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/mediaelement/wp-playlist.min.js?ver=4.9.10'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpv_pagination_local = {"front_ajaxurl":"https:\/\/www.mytalk1071.com\/wp-admin\/admin-ajax.php","calendar_image":"https:\/\/www.mytalk1071.com\/wp-content\/plugins\/wp-views\/embedded\/res\/img\/calendar.gif","calendar_text":"Select date","datepicker_min_date":null,"datepicker_max_date":null,"resize_debounce_tolerance":"100","datepicker_style_url":"https:\/\/www.mytalk1071.com\/wp-content\/plugins\/wp-views\/embedded\/toolset\/toolset-common\/toolset-forms\/css\/wpt-jquery-ui\/jquery-ui-1.11.4.custom.css"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-content/plugins/wp-views/embedded/res/js/wpv-pagination-embedded.js?ver=2.3.1'></script>
+<script type='text/javascript' src='https://2e5jxr4d85132u6hbt4ea9h5-wpengine.netdna-ssl.com/wp-includes/js/wp-embed.min.js?ver=4.9.10'></script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-54hErqx-Sh2gx"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-54hErqx-Sh2gx.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1d8c2aa18a","applicationID":"10248812","transactionName":"M11bYEVXW0UDBUILWQoXeFdDX1pYTRVfDFEIXQ==","queueTime":0,"applicationTime":521,"atts":"HxpYFg1NSEs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

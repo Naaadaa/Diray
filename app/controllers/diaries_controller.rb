@@ -2,8 +2,7 @@
 class DiariesController < ApplicationController
 
         before_action :find_diarie, only: [:show, :edit, :update, :destroy]
-
-    
+        before_action :authenticate_user!    
         def index
             @diaries = Diarie.where(user_id: current_user) #to show only diaries belongs to the current users 
         end
