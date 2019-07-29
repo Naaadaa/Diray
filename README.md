@@ -1,14 +1,18 @@
 # My Diary 
 
 
- ## Summary
+## Summary
 
-Diary App built using Ruby on Rails. https://nadasdiary.herokuapp.com/ 
+Diary App built using Ruby on Rails. 
 
-## Technologies used in this app 
-### Ruby on Rails 
-### bootstrap 
-### jQuery 
+## Technologies used: 
+- Ruby on Rails 
+- bootstrap 
+- jQuery 
+
+## for live demo 
+
+[Click here](https://nadasdiary.herokuapp.com/)
 
 ## Resources 
 
